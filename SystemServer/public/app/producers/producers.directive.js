@@ -100,7 +100,6 @@ angular.module('app')
         
         $scope.$watch('data.producers', function(){
           var dataForChart = extractFromControlsSupplyEach($scope.data.producers.controls, $scope.data.producers.supply);
-          console.log('setting data', dataForChart);
           var dataset = [{label: "Production", data: dataForChart[0], color: "#00A300"}, {label: "Spare capacity", data: dataForChart[1], color: "#AAE0AA"}];
           options.yaxis.ticks = dataForChart[2];
           options.xaxis.max = dataForChart[3] * 1.1;

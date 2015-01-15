@@ -33,7 +33,6 @@ angular.module('app')
       result.num ++;
       transactions.eq(data);
       result.transactionsArray = result.transactions.array.reverse();
-      console.log("tr", transactions);
       result.update.forEach(function(updater){
         if(updater){
           updater();
